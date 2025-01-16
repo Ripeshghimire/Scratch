@@ -8,7 +8,8 @@ also it equips with the knowledge of pretraining and finetuning the existing llm
 What is the process of creating an LLM? 
 
 There are two stages of creating an LLM :
-PreTraining:
+PreTraining:  
+
 It refers to the training of the model in a large diverse dataset  to develop broad understanding of the language 
 Pre-Trained model serves a foundation resources that can be further refined through  finetuning
 
@@ -21,23 +22,46 @@ Autoregressive model are the model that uses the previous output as inputs to de
 
 what is the use of predicting the next token ? 
 The use of predicing the next to key to gpt is predicts the next token according to the user queries
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+What are the stages of building an LLM? 
+The stages of building an LLM are 
+Stage1: Building an LLM
+1.Data preparation 
+2.Attention Mechanism 
+3.LLM Architecture 
 
-What are the stages of Building an LLM? 
+Now we pretrain the model,
+Stage2 : Foundation model 
+Training loop
+Model Evalulation 
+Save pre-trained weights 
+
+Stage 3:
+Finetuning the model according to a labeled data 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Working with text data 
+
+Prepering text for large language model training 
+Splitting text into word and subword tokens 
+Byte pair encoding as a more advanced way of tokenizing text 
+Sampling training examples with a sliding window 
+Converting tokens into vectors that feed into a llm 
 
 
-2.Working with Text data 
-    Preparing text for large language model training 
-    Splitting text into word and subword token
-    Byte Pair Encoding as a more advanced way of tokenizing text 
-    Sampling training exmaple with a sliding window approach 
-    Converting tokens into vectors that feed into a large language model 
 
-Why do we need to understand word embedding ? 
+Word Embedding: 
+what is problem ? why do we have to convert the data into embeddings ? what is embedding ? 
+so the problem is neural network or transformer cannot understand plain text as so what we do is :
+1.We turn the data into vectors using embedding model
+2.The embedding model or pre-trained nn would be different for different types of data
+3.Embedding is mapping the data into vectors in a countinous vector space. 
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Tokenizing text 
 
-What is the main problem of deep neural networks and LLM?
+how do you tokenize the text ? 
 
+what is the usecase of having whitespaces and not having whitespaces ? 
 
-Does various data require various embedding ? 
-
-how do you define the embedding than ? how do you store it? how do we know if the embedding is of video,audio or text? 
+how do you convert token into token ids ?
