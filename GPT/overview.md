@@ -29,8 +29,8 @@ Stage1: Building an LLM
 1.Data preparation 
 2.Attention Mechanism 
 3.LLM Architecture 
-
-Now we pretrain the model,
+ 
+Pretrain the model, the proceed to stage 2
 Stage2 : Foundation model 
 Training loop
 Model Evalulation 
@@ -61,7 +61,35 @@ so the problem is neural network or transformer cannot understand plain text as 
 Tokenizing text 
 
 how do you tokenize the text ? 
+first , we have a set of corpus we divide the text into sub words and tokenize it for example "My name is Ripesh Ghimire" can be divided into ["my","name","is","Ripesh","Ghimire"]
+keeping whitespaces or not is debatable
 
 what is the usecase of having whitespaces and not having whitespaces ? 
+having whitespaces is good for coding llm that does python because indentation is a big thing in python. So, it matters on the usecase
+
 
 how do you convert token into token ids ?
+we map every unique token to token id for eg the above token that we perfomed on my name is ripesh ghimire 
+token ids can be
+my'1' , name '2' etc 
+
+why do we use special tokens ?  what are the type of special token that are used in tokenization ? 
+we define a vocab_size, if the new word that we want to encode is not in the vocabulary, we need to encode it for example new word can be encoded as <|unk|> for unique words 
+<|endoftext|> is used for defining the end of a data for example if you have two books we need to apply the end of text so the model understands that after this there is new text 
+<|pad|> when training llms with batch size larger than one the bathch might contain pad to token to keep up to the lenght of the longest text in the batch
+BOS :BEGGINING OF SEQUENCE
+EOS END OF SEQUENCE 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+Byte Pair Encoding
+
+Why Byte Pair Encoding ? 
+breaks down word into sub word units 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Data sampling with sliding window approach
+
+Why sliding windown ? 
+
+How do you do it ? 
+
+
