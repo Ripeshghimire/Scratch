@@ -88,8 +88,34 @@ breaks down word into sub word units
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Data sampling with sliding window approach
 
-Why sliding windown ? 
+Why sliding window ? 
+sliding window approach in llm refers to making input and output pairs for the llm to train. Basically we will create input pair and output pair and train the model on that
+[290] ----------> 4920
+[290, 4920] ----------> 2241
+[290, 4920, 2241] ----------> 287
+[290, 4920, 2241, 287] ----------> 257
 
 How do you do it ? 
+we do it by making a batch_size and we create the batch size for example the batch size of 4 means the the four tokens are input for the llm and 5th token is the y value or target value for the llm 
+
+why do you we need stride ? 
+stirde helps the slide the input or output_tokens in the llm .If the stride is set to 1 we shift the input windo by 1 position whne creating the next,batch.
+Note: If we set the stride equal to the input window size , we can prevent overlaps between the batches
+
+what is the use of batch size ? 
+to define the input and output for the llm 
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+creating embedding from token ids 
+
+how do you creating embedding from tokenids ? 
+
+what is the use case of nn.Embedding ? 
+
+
+Lookup Operation 
+
+
+Encoding word positions 
+what is the limitation of self-attention in LLM?
