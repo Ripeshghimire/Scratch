@@ -110,12 +110,62 @@ to define the input and output for the llm
 creating embedding from token ids 
 
 how do you creating embedding from tokenids ? 
+we initialize a embedding vector. It is basically a lookup table for the token 
 
 what is the use case of nn.Embedding ? 
-
-
-Lookup Operation 
+nn.Embedding helps us to make embedding layer of vocab_size,d_model
 
 
 Encoding word positions 
 what is the limitation of self-attention in LLM?
+The limitation of self attention is that there is no way to find the position of the data. To resolve the issue positional encoding was developed 
+
+Positional Encoding are added to the token embedding vector to create the input embedding for an LLM 
+The positional vectors embedding have the same demension as the original token embedding. 
+
+
+
+'''“Figure 2.16 Embedding layers perform a look-up operation, retrieving the embedding vector corresponding to the token ID from the embedding layer's weight matrix. 
+For instance, the embedding vector of the token ID 5 is the sixth row of the embedding layer weight matrix (it is the sixth instead of the fifth row because Python starts counting at 0). 
+For illustration purposes, we assume that the token IDs were produced by the small vocabulary we used in section 2.3.'''
+
+
+
+'''
+Encoding word positions 
+converted token ids into embedding , In principle this is a suitable input for an LLM. However a minor shortcoming of llms is that their self attention mechanism . doesn't have the notion of position or order for the order for the position
+within a sequence 
+'''
+
+
+'''
+“If we compare the embedding vector for token ID 3 to the previous embedding matrix, we see that it is identical to the 4th row (Python starts with a zero index, so it's the row corresponding to index 3). 
+In other words, the embedding layer is essentially a look-up operation that retrieves rows from the embedding layer's weight matrix via a token ID.”
+
+
+'''
+
+LLMs require textual data to be converted into numerical vectors, known as embeddings since they can't process raw text. Embeddings transform discrete data (like words or images) into continuous vector spaces, making them compatible with neural network operations.
+As the first step, raw text is broken into tokens, which can be words or characters. Then, the tokens are converted into integer representations, termed token IDs.
+Special tokens, such as <|unk|> and <|endoftext|>, can be added to enhance the model's understanding and handle various contexts, such as unknown words or marking the boundary between unrelated texts.
+The byte pair encoding (BPE) tokenizer used for LLMs like GPT-2 and GPT-3 can efficiently handle unknown words by breaking them down into subword units or individual characters.
+We use a sliding window approach on tokenized data to generate input-target pairs for LLM training.
+Embedding layers in PyTorch function as a lookup operation, retrieving vectors corresponding to token IDs. The resulting embedding vectors provide continuous representations of tokens, which is crucial for training deep learning models like LLMs.
+While token embeddings provide consistent vector representations for each token, they lack a sense of the token's position in a sequence. To rectify[…]”
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Coding Attention Mechanism**  
+**Exploring the reasons for using attention mechanisms in neural networks**  
+**Introducing a basic self-attention framework and progressing to an enhanced self-attention mechanism**  
+**Implementing a causal self-attention module that allows LLMs to generate one token at a time**  
+**Masking randomly selected attention weights with dropout to reduce overfitting**  
+**Stacking multiple causal attention modules into a multi-head attention**  
+
+why attention mechanism ? 
+
+what are the four different variants of self attention ? what do they do ? 
+
+
+
