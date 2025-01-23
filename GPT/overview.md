@@ -166,6 +166,16 @@ While token embeddings provide consistent vector representations for each token,
 why attention mechanism ? 
 
 what are the four different variants of self attention ? what do they do ? 
+Simple attention 
+self attention 
+casual attention 
+multihead attention 
+
+why is traditional rnn not used ? 
+
+why are self-attention introduced in ml? 
+
+what is casual attention ? 
 
 
 

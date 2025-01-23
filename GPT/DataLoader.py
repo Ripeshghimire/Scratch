@@ -42,4 +42,4 @@ def create_loader_v1(text,batch_size=4,max_length = 256,stride = 128,shuffle=Tru
     dataset = GPTDataset(text,tokenizer,max_length,stride)
     dataloader = DataLoader(dataset,batch_size=batch_size,shuffle=shuffle,drop_last=drop_last)
     return dataloader
-   
+    
