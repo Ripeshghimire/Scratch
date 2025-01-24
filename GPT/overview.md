@@ -22,7 +22,7 @@ Autoregressive model are the model that uses the previous output as inputs to de
 
 what is the use of predicting the next token ? 
 The use of predicing the next to key to gpt is predicts the next token according to the user queries
----------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 What are the stages of building an LLM? 
 The stages of building an LLM are 
 Stage1: Building an LLM
@@ -177,5 +177,4 @@ why are self-attention introduced in ml?
 
 what is casual attention ? 
 
-
-
+what does self in self attention mean ? 
