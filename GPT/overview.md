@@ -172,9 +172,16 @@ casual attention
 multihead attention 
 
 why is traditional rnn not used ? 
+traditional rnn is not used in modern ml because we using traditional rnn can cause vanishing gradient problem and the output of the last state is given to the input in the first staet as a result information or context cannot be shared of the previous state
 
 why are self-attention introduced in ml? 
+self-attention is used in ml for computing attention weights where the algorithm can know the importane of each word in a sentence
 
 what is casual attention ? 
 
 what does self in self attention mean ? 
+
+
+what is the use of softmax function in attention mechanism? 
+softmax function is used to normalize the weights and that the attention weights are always positive. This makes the output interpretable as probabilities of
+relative importance, where higher weights indicate greater importance/
