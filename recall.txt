@@ -1,0 +1,19 @@
+Attention Mechanism & Self-Attention
+Why is the attention mechanism used in machine learning?
+What are the four different variants of self-attention, and what does each do?
+Simple Attention
+Self-Attention
+Causal Attention
+Multihead Attention
+What does "self" mean in self-attention?
+What is the main goal of self-attention?
+Why was self-attention introduced in ML?
+What is causal attention, and how does it differ from self-attention?
+Why is the softmax function used in the attention mechanism?
+What is a context vector, and why is it important?
+What is the use of a context vector in language models?
+What is the first step of implementing self-attention?
+Why Traditional RNNs Are Not Used
+Why are traditional RNNs not commonly used in modern ML?
+What is the vanishing gradient problem, and how does it affect RNNs?
+How does self-attention solve the context-sharing problem that RNNs face?

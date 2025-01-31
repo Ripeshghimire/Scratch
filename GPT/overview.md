@@ -179,9 +179,43 @@ self-attention is used in ml for computing attention weights where the algorithm
 
 what is casual attention ? 
 
-what does self in self attention mean ? 
+what does self in self at0ention mean ? 
 
 
 what is the use of softmax function in attention mechanism? 
 softmax function is used to normalize the weights and that the attention weights are always positive. This makes the output interpretable as probabilities of
-relative importance, where higher weights indicate greater importance/
+relative importance, where higher weights indicate greater importance
+
+'''
+1.self attention is a mechanism in transformers that is used to compute more efficient input representations by allowing each position in a sequence to interact with and weigh
+the importance of all other positions within the same sequence 
+2. The "self" in self attention ?
+    >ability to compute attention weights by relating different positions within a single input sequence.
+    >assesses and learns the relationship and dependencies between various parts of the inputs itself such as word in a senctence or pixels in an image 
+what is the main goal of self-attention ?
+    >compute a context vector for each input element, that combines information from all other input elements. 
+    >importance or contribution of each input element for computing is determined by attention weights
+    >when computing attention weights are calculated with respect to input element, and all other inputs. 
+context vector: 
+context vector is an embedding that contains information about all other inputs elements. It can be interpreted as an enriched embedding vector
+what is the use of context vector? 
+    > to create enriched representation of each elements in an input sequence like a sentence by incorporation information from all other elements in the sequence
+    >helps to understand realtionsship and relevance of words in a sentecne to each other. 
+    >Later we will add trainable weights that help an LLM learng to consturct these context vectors so that they are relevant for the LLM to generate the next token
+
+First step of implementing self-attention is to compute the intermediate values w refered to as attention scores 
+
+
+Dot product 
+    It is a tool that combines two vectors to yield a scalar value, the dot product is a measure of similarity becuase it quantifies how much two vector are
+    aligned : a higher dot product indicated a greater degree of alignment or similarity between the vectors. 
+    In self attention , 
+    the dot product determines the extent of which elements in a sequence attend to each other: the higher the dot product, the higher the similarity and attention
+    score between two elements 
+
+In the next step, 
+    Normalizing each of attention scores that we computed previously 
+    The main goal behing normalizing the wights is to obtain a weights that sum up to 1. 
+    Useful for interpretation 
+    Useful for maintaining and training stability in an LLM 
+
