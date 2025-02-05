@@ -219,3 +219,47 @@ In the next step,
     Useful for interpretation 
     Useful for maintaining and training stability in an LLM 
 
+
+How to make self-attention ? 
+Compute attention scores 
+Compute attention weights 
+Compute context vectors 
+
+
+3.4 Implementing self-attention with trainable weights 
+
+scaled dot-product attention 
+
+difference between simplified self attention is that the introduction of weight matrices that are updated during model training 
+ 
+trainable weight matrices are crucial so that the model(specifically, the attention module inside the model)
+can learn to produce "good" context vectors 
+
+
+
+3.4.1 
+Computing the attention weights step by step 
+Query : Determines how much attention the token should pay to others 
+Key : Helps in computing attention score 
+value :  Holds the actual token information used in the weighted sum 
+
+
+
+
+Three trainable weight matrices Wq,Wk,Wv 
+ 
+value vector correspoding to the frist input toekn obtrained via matrix mulitplicatoin between the weight matrix Wv and input token x 
+
+query : analogous to a search query in a database
+        represents the current item (eg: a word or token in a sentence ) the model focuses on or tries to understand 
+        query is used to probe the others parts of the input sequence to dtermeine how much attention to pay ot them 
+
+key:    "key" is like a database key used for indexing and searching .
+        In attention, each item in the input sequence eg worch in a sentence has an associated key 
+        these keys are used to match with the query 
+
+value : key-value pair in a database . 
+        represents the actual content or representation of the input items . 
+        once the model determines which keys (and thus which parts of the input) are most relevant query(the current focus item ) it retrieves the correspoding 
+        values 
+
